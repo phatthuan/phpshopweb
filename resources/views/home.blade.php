@@ -6,7 +6,7 @@
         <div class="wrap-slick1">
             <div class="slick1">
 
-                {{-- @foreach($sliders as $slider)
+                @foreach($sliders as $slider)
 
                     <div class="item-slick1" style="background-image: url({{ $slider->thumb }});">
                         <div class="container h-full">
@@ -31,7 +31,7 @@
                             </div>
                         </div>
                     </div>
-                @endforeach --}}
+                @endforeach
             </div>
         </div>
     </section>
@@ -41,7 +41,7 @@
     <div class="sec-banner bg0 p-t-80 p-b-50">
         <div class="container">
             <div class="row">
-                {{-- @foreach($menus as $menu)
+                @foreach($menus as $menu)
                     <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
                         <!-- Block1 -->
                         <div class="block1 wrap-pic-w">
@@ -66,7 +66,7 @@
                             </a>
                         </div>
                     </div>
-                @endforeach --}}
+                @endforeach
             </div>
         </div>
     </div>
