@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\UploadController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\MainController as ClientMainController;
 use App\Http\Controllers\MenuController as ClientMenuController;
 use App\Http\Controllers\ProductController as ClientProductController;
@@ -56,8 +57,8 @@ Route::post('/services/load-product', [ClientMainController::class, 'loadProduct
 Route::get('danh-muc/{id}-{slug}.html', [ClientMenuController::class, 'index']);
 Route::get('san-pham/{id}-{slug}.html', [ClientProductController::class, 'index']);
 
-// Route::post('add-cart', [App\Http\Controllers\CartController::class, 'index']);
-// Route::get('carts', [App\Http\Controllers\CartController::class, 'show']);
-// Route::post('update-cart', [App\Http\Controllers\CartController::class, 'update']);
-// Route::get('carts/delete/{id}', [App\Http\Controllers\CartController::class, 'remove']);
-// Route::post('carts', [App\Http\Controllers\CartController::class, 'addCart']);
+Route::post('add-cart', [CartController::class, 'index']);
+Route::get('carts', [CartController::class, 'show']);
+Route::post('update-cart', [CartController::class, 'update']);
+Route::get('carts/delete/{id}', [CartController::class, 'remove']);
+Route::post('carts', [CartController::class, 'addCart']);

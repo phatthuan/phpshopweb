@@ -4,7 +4,7 @@
     <form class="bg0 p-t-130 p-b-85" method="post">
         @include('admin.alert')
 
-        @if (count($products) != 0)
+        @if (count($productsCart) != 0)
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
@@ -22,7 +22,7 @@
                                         <th class="column-6">&nbsp;</th>
                                     </tr>
 
-                                    @foreach($products as $key => $product)
+                                    @foreach($productsCart as $key => $product)
                                         @php
                                             $price = $product->price_sale != 0 ? $product->price_sale : $product->price;
                                             $priceEnd = $price * $carts[$product->id];

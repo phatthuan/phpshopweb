@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\CartService;
 use App\Http\Services\Menu\MenuService;
 use App\Http\Services\Product\ProductService;
 use App\Http\Services\Slider\SliderService;
@@ -27,7 +28,7 @@ class MainController extends Controller
             'title' => 'Shop Nước Hoa ABC',
             'sliders' => $this->slider->show(),
             'menus' => $this->menu->show(),
-            'products' => $this->product->get()
+            'products' => $this->product->get(),
         ]);
     }
 
