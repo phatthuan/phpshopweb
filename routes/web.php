@@ -48,6 +48,9 @@ Route::middleware(['auth'])->group(function(){
             Route::post('edit/{slider}', [SliderController::class, 'update']);
             Route::delete('destroy', [SliderController::class, 'destroy']);
         });
+
+        Route::get('customers', [\App\Http\Controllers\Admin\CartController::class, 'index']);
+        Route::get('customers/view/{customer}', [\App\Http\Controllers\Admin\CartController::class, 'show']);
     });
 });
 
